@@ -23,7 +23,7 @@ inline int generateRandomNumber() {
 
 inline int generateRandomIndex(int vectorSize) {
 	generateSeed();
-	return rand() % vectorSize;
+	return vectorSize > 0 ? rand() % vectorSize : 0;
 }
 
 inline int generateRandomNumberInRange(int firstPossibleValue, int lastPossibleValue) {
